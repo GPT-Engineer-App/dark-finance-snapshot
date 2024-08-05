@@ -23,48 +23,48 @@ const pieData = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-8">
-      <h1 className="text-4xl font-bold mb-8">Financial Dashboard</h1>
+    <div className="min-h-screen bg-gray-900 text-gray-100 p-8">
+      <h1 className="text-4xl font-bold mb-8 text-white">Financial Dashboard</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <Card className="bg-gray-800">
+        <Card className="bg-gray-800 border-gray-700">
           <CardHeader>
-            <CardTitle>Total Revenue</CardTitle>
+            <CardTitle className="text-gray-200">Total Revenue</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-3xl font-bold">$19,550</p>
+            <p className="text-3xl font-bold text-white">$19,550</p>
           </CardContent>
         </Card>
-        <Card className="bg-gray-800">
+        <Card className="bg-gray-800 border-gray-700">
           <CardHeader>
-            <CardTitle>Total Expenses</CardTitle>
+            <CardTitle className="text-gray-200">Total Expenses</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-3xl font-bold">$26,406</p>
+            <p className="text-3xl font-bold text-white">$26,406</p>
           </CardContent>
         </Card>
-        <Card className="bg-gray-800">
+        <Card className="bg-gray-800 border-gray-700">
           <CardHeader>
-            <CardTitle>Net Profit</CardTitle>
+            <CardTitle className="text-gray-200">Net Profit</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-3xl font-bold text-red-500">-$6,856</p>
+            <p className="text-3xl font-bold text-red-400">-$6,856</p>
           </CardContent>
         </Card>
-        <Card className="bg-gray-800">
+        <Card className="bg-gray-800 border-gray-700">
           <CardHeader>
-            <CardTitle>Profit Margin</CardTitle>
+            <CardTitle className="text-gray-200">Profit Margin</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-3xl font-bold text-red-500">-35.07%</p>
+            <p className="text-3xl font-bold text-red-400">-35.07%</p>
           </CardContent>
         </Card>
       </div>
 
       <Tabs defaultValue="revenue" className="mb-8">
-        <TabsList className="bg-gray-800">
-          <TabsTrigger value="revenue">Revenue vs Expenses</TabsTrigger>
-          <TabsTrigger value="profit">Profit Trend</TabsTrigger>
+        <TabsList className="bg-gray-800 text-gray-200">
+          <TabsTrigger value="revenue" className="data-[state=active]:bg-gray-700 data-[state=active]:text-white">Revenue vs Expenses</TabsTrigger>
+          <TabsTrigger value="profit" className="data-[state=active]:bg-gray-700 data-[state=active]:text-white">Profit Trend</TabsTrigger>
         </TabsList>
         <TabsContent value="revenue">
           <Card className="bg-gray-800">
@@ -121,12 +121,12 @@ const Index = () => {
             </ResponsiveContainer>
           </CardContent>
         </Card>
-        <Card className="bg-gray-800">
+        <Card className="bg-gray-800 border-gray-700">
           <CardHeader>
-            <CardTitle>Key Metrics</CardTitle>
+            <CardTitle className="text-gray-200">Key Metrics</CardTitle>
           </CardHeader>
           <CardContent>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-gray-300">
               <li>Customer Acquisition Cost: $250</li>
               <li>Lifetime Value: $1,200</li>
               <li>Churn Rate: 5.2%</li>
